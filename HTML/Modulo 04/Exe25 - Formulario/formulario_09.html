@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Output com range</title>
+</head>
+<body>
+    <form action="cadastro.js" method="get">
+        <h1>Output com range</h1>
+        <fieldset>
+            <legend>Valor com range</legend>
+            <p>
+                <input type="range" name="num" id="num" min="1" max="100"
+                oninput="aumenta.innerHTML = Number(num.value)">
+                <label for="num">Você aumentou até o número: </label>
+                <output id="aumenta"></output>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Redefinir">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

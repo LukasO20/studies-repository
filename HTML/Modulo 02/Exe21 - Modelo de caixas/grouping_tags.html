@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        /* ----- CONTEUDO DESSE DOCUMENTO HTML ----- */
+        /* Caixas "Div's" */
+        /* Sombras */
+        /* Margens e Paddings */
+        /* Vértices arredondados Border */
+
+        body {
+            background-color: rgb(72, 153, 72);
+            font: normal 17.5px Arial, Helvetica, sans-serif; 
+        }
+
+        header {
+            color: white;
+            background-color: rgb(166, 212, 97);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgba(184, 184, 184, 0.322); 
+        }
+
+        #info {
+            background-color: rgb(47, 121, 47);
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        footer {
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: inset 1px 1px 5px rgb(27, 27, 27);
+            background-color: rgb(36, 35, 35);
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        nav {
+            background-color: rgb(72, 153, 72);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: inset 1px 1px 5px /* "5px" é o espaçamento da sombra */ rgb(47, 121, 47);
+            /* "inset" sombreamento interior - caso remova-o o sombreamento é exterior */ 
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 0.5px 0.5px 2px rgb(47, 121, 47);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Página com "Div's" Semânticas</h1>
+        <nav>
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assunto">
+
+        </section>
+        <section id="info">
+            <article>
+                <h2>Semânticas são muito boas :D</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, quo nulla minima quas assumenda placeat, qui dolorem, modi eveniet nisi ipsum iste itaque aspernatur totam? Tenetur quis corporis quasi facere?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum incidunt a repudiandae ducimus nam deleniti omnis ratione aperiam hic, nesciunt nulla molestias, fugit est! Ad, deserunt! Quos tenetur enim consequuntur?</p>
+                <aside>
+                    <p>Teste desenvolvido por Lucas.</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>HTML5 & CSS3 | Development by Lucas</p>
+    </footer>
+</body>
+</html>

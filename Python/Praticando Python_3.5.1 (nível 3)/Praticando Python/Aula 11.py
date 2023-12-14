@@ -1,0 +1,1 @@
+print('\033[1;32;44m OLÁ MEU QUERIDO USUÁRIO \033[m')

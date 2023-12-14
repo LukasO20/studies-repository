@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Typical devices breakpoint 
+
+Telas pequenas: 600px -
+Smartphone: 600px - 768px
+Tablet: 768px - 992px
+Desktop: 992px - 1200px
+Grande telas: 1200px +
+
+*/
+
+@media screen and (min-width: 768px){
+    span#expandir {
+        display: none;
+    }
+
+    header > menu {
+        display: block;
+    }
+
+    header > menu > ul > li {
+        display: inline-block;
+    }
+
+    header > menu > ul > li > a {
+        border: none;
+        border-radius: 5px;
+        margin: 2px 2px 15px 5px;
+    }
+
+    main {
+        width: 768px;
+    }
+
+    main > section > article .imagem {
+        background: url(../imagem/icon-pc.png);
+    }
+}
+
+.imagem {
+    width: 200px;
+    height: 200px;
+    background: url(../imagem/icon-phone.png);
+}

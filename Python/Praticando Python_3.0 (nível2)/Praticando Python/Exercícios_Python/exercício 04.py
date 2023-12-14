@@ -1,0 +1,8 @@
+tipo = input('Digite algo, vamos conferir seu tipo primitivo: ')
+print ('O que você digitou tem característica como...', type (tipo))
+print ('Só tem espaços?', tipo.isspace())
+print ('Será que é uma palavra?', tipo.isalpha())
+print ('Que tal um número, só tem números?', tipo.isnumeric())
+print ('É tudo em letra maiúscula?', tipo.isupper())
+print ('E se for tudo em letra minúscula?', tipo.islower())
+print ('Tem letras e números?', tipo.isalnum())

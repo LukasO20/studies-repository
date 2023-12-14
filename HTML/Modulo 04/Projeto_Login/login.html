@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media_query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+
+            </div>
+            <div id="formulario">
+                <div class="topo">
+                    <h1>Acessar conta</h1>
+                    <p class="mensagem">Seja muito bem-vindo(a) preencha os dados abaixo para efetuar o login.</p>
+                </div>
+                <form action="login_html.js" method="get" autocomplete="on">
+                    <div class="campo">
+                        <label for="email">Login</label>
+                        <i class="material-icons">account_circle</i><input type="email" name="email" id="email" placeholder="Digite o seu e-mail" autocomplete="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <i class="material-icons">key</i><input type="password" name="senha" id="senha" placeholder="Digite a sua senha" autocomplete="current-password" required>
+                    </div>
+                    <p class="p_login"><input type="submit" value="Login" class="button_login"></p>
+                    
+                    <p class="p_reset_senha">
+                        <a href="" class="reset_senha">
+                            Esqueci minha senha.
+                            <i class="material-icons">forward_to_inbox</i> 
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

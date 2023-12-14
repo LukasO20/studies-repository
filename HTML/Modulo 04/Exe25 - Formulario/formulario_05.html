@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários - mais tipos 2 </title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+
+        h1 {
+            color: rgb(48, 46, 46);
+        }
+
+        fieldset:hover {
+            color: rgb(55, 169, 221);
+            transition: .2s ease;
+        }
+
+        fieldset input {
+            margin: 0px 0px 2px 2px;
+            padding: 2.5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário outros tipos 2</h1>
+    <form action="cadastro.js" method="get">
+        <fieldset>
+            <legend>Genero</legend>
+            <input type="radio" name="genero" id="shooter" required><label for="shooter">Shooter</label>
+            <input type="radio" name="genero" id="corrida" required><label for="corrida">Corrida</label>
+            <input type="radio" name="genero" id="aa" required><label for="aa">Ação - Aventura</label>
+        </fieldset>
+        <fieldset>
+            <legend>Games</legend>
+            <input type="checkbox" name="game1" id="game_halo"><label for="game_halo">Halo 2</label>
+            <input type="checkbox" name="game2" id="game_hifi"><label for="game_hifi">Hifi Rush</label>
+            <input type="checkbox" name="game3" id="game_ori"><label for="game_ori">Ori - The Blind Forest (label N/A)</label>
+            <input type="checkbox" name="game4" id="game_forza"><label for="game_forza">Forza Horizon (label N/A)</label>
+        </fieldset>
+        <p>
+            <input type="submit" value="Confirmar">
+            <input type="reset" value="Resetar">
+        </p>
+    </form>
+</body>
+</html>

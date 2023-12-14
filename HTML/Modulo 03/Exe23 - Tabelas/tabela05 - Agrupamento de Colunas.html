@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColGroups</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        table {
+            text-align: center;
+            width: 500px;
+            border-collapse: collapse;
+            box-shadow: 1.5px 1.5px 5px rgb(41, 41, 41);
+        }
+
+        caption {
+            font-size: 1.3em;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+        th, td {
+            border: 2px solid rgb(41, 41, 41);
+            padding: 5px;
+        }
+
+        .cnome {
+            background-color: rgb(93, 157, 209);
+        }
+
+        .cid {
+            background-color: rgb(172, 87, 252);
+        }
+
+        .cprofissao {
+            background-color: rgb(224, 179, 65);
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela com 'colgroups'</h1>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="cid" span="2">
+            <col class="cprofissao">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tbody>
+            <thead>
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+            </thead>
+            <tr>
+                <td>Larissa Forger</td>
+                <td>Feminino</td>
+                <td>22</td>
+                <td>Designer</td>
+            </tr>
+            <tr>
+                <td>Emanuel Roger</td>
+                <td>Masculino</td>
+                <td>24</td>
+                <td>Desenvolvedor</td>
+            </tr>
+            <tr>
+                <td>Jouseff Antonien</td>
+                <td>Masculino</td>
+                <td>27</td>
+                <td>Marketing</td>
+            </tr>
+            <tr>
+                <td>Laura Emanuella</td>
+                <td>Feminino</td>
+                <td>25</td>
+                <td>Jornalista</td>
+            </tr>
+            <tr>
+                <td>Ruan Sabino</td>
+                <td>Masculino</td>
+                <td>28</td>
+                <td>Advogado</td>
+            </tr>
+            <tr>
+                <td>José Bernado</td>
+                <td>Masculino</td>
+                <td>30</td>
+                <td>Artista</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

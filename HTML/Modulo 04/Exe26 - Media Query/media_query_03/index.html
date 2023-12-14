@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>União Media Features</title>
+    <style>
+        /* Declarações para Media query - retrato - paisagem - default */
+
+        @charset "UTF-8";
+
+        /* Configurações Default */
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 153, 0, 0.6);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            padding: 10px;
+            color: white;
+            text-shadow: 0.5px 0.5px 1.5px rgb(238, 63, 0);
+        }
+
+        p {
+            font-weight: 600;
+            color: rgb(20, 20, 20);
+            padding: 10px;
+            background-color: rgba(255, 68, 0, 0.897);
+            border-radius: 5px;
+            width: 65%;
+            text-align: center;
+            margin: 10px;
+        }
+
+        cite {
+            color: white;
+            margin: 10px;
+            text-shadow: 2px 2px 1px rgb(44, 44, 44);
+        }
+
+        /* retrato */
+        @media screen and (orientation: portrait){
+            body {
+                /*background-color: orangered;*/
+                background-image: url('./imagens/pexels-karolina-grabowska-portrait.jpg');
+                background-position: center bottom;
+            }
+
+            p {
+                background-color: rgba(100, 148, 237, 0.897);
+            }
+        }
+
+        /* paisagem */
+        @media screen and (orientation: landscape){
+            body {
+                /*background-color: rgba(31, 153, 253, 0.726);*/
+                background-image: url('./imagens/pexels-karolina-grabowska-landscape.jpg');
+                background-position: left bottom;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>União de features com Media Query</h1>
+    <p>Este corpo se adapta de acordo com o display de seu dispositivo</p>
+    <cite>Image by - Karolina Grabowska</cite>
+</body>
+</html>

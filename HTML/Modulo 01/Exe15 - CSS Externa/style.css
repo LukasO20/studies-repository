@@ -1,0 +1,25 @@
+@charset "UTF-8"; /* Código para utilizar formatação de linguagens, como no HTML5 */
+
+body {
+    background-color: rgb(255, 127, 81);
+    font-family: 'Arial Narrow', sans-serif;
+    font-size: 19px;
+}
+
+h1{
+    background-color:cornflowerblue; padding: 5px; border-radius: 5px;
+    color: white;
+}
+
+h2{
+    color: rgb(36, 36, 36)
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    font: white;
+    text-decoration: none;
+}

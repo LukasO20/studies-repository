@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div {
+            background-color: blueviolet;
+            display: inline-block;
+            box-shadow: 0.2px 0.2px 10px blueviolet;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            transition-duration: 0.5s;
+        }
+
+        div:hover { /* o "div:gover" é uma pseudoclasse! Observa os : */
+            background-color: darkslateblue;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Uma Pseudo classe é marcada por --> : */
+    </style>
+</head>
+<body>
+    <div id="div01">
+        01
+    </div>
+    <div id="div02">
+        02
+    </div>
+    <div id="div03">
+        03
+    </div>
+</body>
+</html>

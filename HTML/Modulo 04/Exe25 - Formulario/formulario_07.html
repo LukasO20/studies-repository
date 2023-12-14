@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários - Select, datalist e text area</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulários - mais outros campos</h1>
+    <form action="cadastro.js" method="get" autocomplete="on">
+        <p>
+            <label for="select">Estados</label>
+            <select>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP" selected>São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="BG">Bahia</option>
+                    <option value="SG">Sergipe</option>
+                    <option value="EG">Egito</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="prof">Profissão</label>
+            <input type="text" name="prof" id="prof" list="listprof">
+            <datalist id="listprof">
+                <option>Administrador</option>
+                <option>Cozinheiro</option>
+                <option>Desenvolvedor</option>
+                <option>Designer</option>
+            </datalist>
+        </p>
+
+        <p>
+            <!-- Com o textarea utilize o 'method post' por conta de não ser limitado a 3MB de envio de dados -->
+            <label for="msg">Mensagem</label><br>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Digite uma mensagem :D"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Redefinir">
+        </p>
+    </form>
+</body>
+</html>

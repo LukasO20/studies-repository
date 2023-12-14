@@ -1,0 +1,1 @@
+"O Login foi efetuado, um formulário de login utiliza do código back-end (do projeto) para a validação de dados e permissão de acesso no sistema. Para mais detalhes, confira as linguagens de programação que trabalham com isso, como JavaScript, PHP, C#, Java e muitas outras!";

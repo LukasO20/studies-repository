@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Output</title>
+</head>
+<body>
+    <h1>Formulário com Output - Anos</h1>
+    <form action="cadastro.js" method="get">
+        <fieldset>
+            <legend>Idade</legend>
+            <p>
+                <label for="ano">Em que ano você nasceu? </label>
+                <input type="number" name="ano" id="ano" min="1900" max="2023" placeholder="2023" required
+                oninput="calculaIdade()">
+            </p>
+            <p>
+                <label for="idade">Você tem: </label>
+                <output id="idade"></output> anos!
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Redefinir">
+            </p>
+        </fieldset>
+    </form>
+    <script>
+        function calculaIdade(){
+            let atual = new Date().getFullYear();
+            idade.innerHTML = Number(atual) - Number(ano.value);
+        }
+    </script>
+</body>
+</html>

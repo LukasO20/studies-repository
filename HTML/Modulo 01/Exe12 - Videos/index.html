@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Essa página possuí videos</h1>
+    <p>Agora é a vez dos vídeos, essa página possui vídeos hospedados no servidor local (meu próprio) :)</p>
+    <video width="560" controls loop> <!-- Inserir vídeos conforme esse código previne de ocorrer problemas!
+    Cada navegador poissuí um tipo de arquivo suportado!
+    por isso a TAG SOURCE é importante... 
+    -->
+        <source src="midias/horses.m4v">
+        <source src="midias/horses.mp4">
+        <source src="midias/horses.ogv">
+        <source src="midias/horses.webm">
+        <p>Infelizmente o seu navegador não possuí compatibilidade com o vídeo :/</p>
+        <!-- Esse código possui consumo de Banda alto! -->
+    </video>
+    <p>Vídeos hospedados no servidor do YouTube</p>
+    <!-- Esse código possui consumo de Banda Ilimitado (hospedado no servidor do YouTube) -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/m7p0C9VJu6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

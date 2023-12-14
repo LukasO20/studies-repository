@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem de fundo</title>
+    <style>
+        /* Não use um Background na cor branca caso deseja utilizar imagensa de fundo */
+
+        /* Shorthand - background 
+        color > image > position > repeat > size? > attachement*/
+
+        body {
+            height: 100vh;
+            /*
+            background-color: cornflowerblue;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover; || <-- Ocupa 100% da View port 
+            background-attachment: scroll; || <-- Fundo automatizado 
+            */ 
+        
+            background: cornflowerblue url('imagens/wallpaper002.jpg') center center
+            no-repeat scroll;
+            background-size: cover;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        main {
+            text-align: justify;
+            margin: auto;
+            background-color: cadetblue;
+            border-radius: 20px;
+            width: 500px;
+            padding: 20px;
+            border: 2px solid rgb(58, 102, 104);
+            box-shadow: 0.5px 0.5px 15px rgb(58, 102, 104);
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <h1>Teste com imagem de fundo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis distinctio dolor fugit aspernatur? Corrupti non quis quo consectetur. Magni inventore doloremque tenetur esse temporibus doloribus fugit nobis quas sint laudantium!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam laborum molestiae esse tenetur nisi porro commodi excepturi nam, harum at maxime sequi reprehenderit ducimus, quas error odit et. Eveniet, rerum!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo molestias at quam pariatur, ab voluptatum nostrum et voluptates aspernatur ex quibusdam quasi iure alias error cum veritatis enim, nulla sit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet debitis vel harum beatae magni magnam fugit libero adipisci ea nam nihil, delectus atque mollitia voluptatibus animi, nesciunt quod veritatis soluta?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque debitis quis necessitatibus reprehenderit adipisci quasi repellat vel alias minus! Quae harum voluptates magni amet quasi eum obcaecati accusantium sequi dolores!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit neque quas ut maxime fuga cumque aut minima dolorum nihil possimus necessitatibus nemo architecto, enim eos ipsum at iure? Suscipit, explicabo?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nihil neque eius qui corporis ex obcaecati animi doloremque id, omnis mollitia. Possimus in voluptas omnis obcaecati non deserunt tempora sequi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perspiciatis corrupti enim molestias quibusdam quae nulla asperiores quasi corporis. Atque vero nam eveniet dicta quo veniam consectetur reprehenderit, tempora sit?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit aliquam sunt blanditiis magnam voluptates culpa ea maxime minus sint quas. Perferendis nobis porro eos fuga incidunt, recusandae minima suscipit.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae et omnis sequi doloribus ea dolore quos aliquam nostrum neque a consequatur enim, veritatis impedit. Deserunt, quidem. Accusamus maiores aliquam assumenda!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum perferendis culpa corrupti, magni et aliquid voluptatibus! Harum officia itaque neque id ipsum modi magnam, rem ducimus, nihil animi adipisci dolorem!
+    </p>
+    </main>
+</body>
+</html>

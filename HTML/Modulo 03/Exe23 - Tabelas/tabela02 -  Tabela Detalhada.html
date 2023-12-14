@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Grande</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            height: 80px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td, th {
+            border: 1.5px solid gray;
+            padding: 2px;
+        }
+
+        tr {
+            height: 50px;
+        }
+
+        .tdNum {
+            text-align: right;
+        }
+
+        .tdAno, .tdFonte {
+            text-align: center;
+        }
+
+        caption {
+            font-size: 1.5em;
+            padding: 10px;
+            font-weight: 600px;
+            background-color: grey;
+        }
+
+        thead tr {
+            background-color: steelblue;
+            color: rgb(9, 37, 59);
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: steelblue;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: #8bbae0;
+        }
+
+        tbody tr:hover {
+            background-color: steelblue;
+            font-weight: 600;
+            color: white;
+        }
+
+        tfoot {
+            font-weight: 600;
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>O uso de uma tabela detalhada</h1>
+    <!-- ANATOMIA DE TABELAS GRANDES
+
+        TABLE
+        CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY 
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH  
+    -->
+
+
+    <table>
+        <caption>População dos Estados Brasileiros</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <th scope="col" style="width: 80px;">Ano</th>
+                <th scope="col">Fonte</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="tdNum">12.330 milhões</td>
+                <td class="tdAno">2020</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="tdNum">20.870 milhões</td>
+                <td class="tdAno">2015</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="tdNum">6.748 milhões</td>
+                <td class="tdAno">2020</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="tdNum">15.130 milhões</td>
+                <td class="tdAno">2014</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="tdNum">3.874 milhões</td>
+                <td class="tdAno">2014</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="tdNum">3.885 milhões</td>
+                <td class="tdAno">2014</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="tdNum">496.936 mil</td>
+                <td class="tdAno">2014</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="tdNum">3.224 milhões</td>
+                <td class="tdAno">2014</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Sergípe</td>
+                <td class="tdNum">2.220 milhões</td>
+                <td class="tdAno">2014</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="tdNum">2.620 milhões</td>
+                <td class="tdAno">2014</td>
+                <td class="tdFonte">Google</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="tdNum">10.444 milhões</td>
+                <td class="tdAno">2022</td>
+                <td class="tdFonte">Wikipedia</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="tdNum">9.051 milhões</td>
+                <td class="tdAno">2022</td>
+                <td class="tdFonte">Wikipedia</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="tdNum">8.936 milhões</td>
+                <td class="tdAno">2022</td>
+                <td class="tdFonte">Wikipedia</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="tdNum">3.125 milhões</td>
+                <td class="tdAno">2022</td>
+                <td class="tdFonte">Wikipedia</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="tdNum">774.000 mil</td>
+                <td class="tdAno">2022</td>
+                <td class="tdFonte">Wikipedia</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes </th>
+                <td class="tdNum">103.727 milhões...</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>        
+</body>
+</html>

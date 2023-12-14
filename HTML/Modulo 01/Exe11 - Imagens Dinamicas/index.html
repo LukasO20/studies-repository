@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas</title>
+</head>
+<body>
+    <h1>Imagens Dinânimcas</h1>
+    <p>Esse site poderá ser aberto em diversos dispositivos para melhor visibilidade das imagens, preferencialmente também será possível de dar Zoom pelo navegador.</p>
+
+    <picture>
+        <source media="(max-width: 950px)" srcset="img/foto_p.png" type="image/png">
+        <source media="(max-width: 1170px)" srcset="img/foto_m.png" type="image/png">
+        <img src="img/foto_g.png" alt="Imagem flexível">
+    </picture>
+    <h2>Audios com o HTML5</h2>
+    <p>Essa página também possui a mídia de audios :D</p>
+    <audio preload="metadata" autoplay controls> <!-- O comando ao lado permite a visualização de um player -->
+        <source src="midia/World Map-Jason Farnham.mp3" type="audio/mpeg">
+        <p>Infelizmente esse navegador que utiliza não está reproduzindo áudio. :/</p>
+    </audio><br>
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/You're Not Wrong-roljui.mp3" type="audio/mpeg">
+        <p>Infelizmente esse navegador que utiliza não está reproduzindo áudio. :/</p>
+    </audio>
+</body>
+</html>

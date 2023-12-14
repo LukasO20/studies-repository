@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* Paleta de cores
+    color1 - #D9CFC4
+    color2 - #A99884
+    color3 - #DFE1E2
+    color4 - #EEE9E3
+*/
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;  
+}
+
+body, html {
+    background-color: #DFE1E2;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    background-color: white;
+    width: 270px;
+    height: 570px;
+    border-radius: 10px;
+    margin: 10px;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    box-shadow: 1px 0.5px 5px #d1d1d1;
+
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s ease;
+}
+
+section#login > div#imagem {
+    display: block;
+    background: url(../imagens/pexels-rodion-kutsaiev-7911758.jpg) no-repeat;
+    height: 180px;
+    background-size: cover;
+}
+
+section#login > div#formulario {
+    display: block;
+    text-align: justify;
+}
+
+section#login > div#formulario > form {
+    padding: 15px;
+}
+
+div#formulario > div.topo {
+    background-color: #A99884;
+    color: #46413c;
+    padding: 5px;
+}
+
+div#formulario > div.topo > h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+div#formulario > div.topo > p {
+    padding: 15px;
+}
+
+div#formulario div.campo label {
+    font-weight: 600;
+    color: #4d4d4d;
+    display: block;
+}
+
+div#formulario div.campo {
+    margin: 5px 0px;
+}
+
+div#formulario div.campo i {
+    padding: 5px;
+    font-size: 1.4em;
+    color: #61574b;   
+}
+
+div#formulario div.campo input {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #aaaaaa;
+    font-size: 1em;
+}
+
+div#formulario p .button_login {
+    height: 35px;
+    font-size: 1em;
+    margin: 10px 0px;
+    border-radius: 10px;
+    width: 35%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #D9CFC4;
+    color: #61574b;
+    transition: .3s ease;
+}
+
+div#formulario p .button_login:hover {
+    background-color: #A99884;
+    color: #ffffff;
+}
+
+div#formulario .reset_senha {
+    color: #61574b;
+    font-weight: 600;
+}
+
+div#formulario .p_reset_senha, div#formulario .p_login {
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+div#formulario .p_reset_senha .reset_senha i {
+    position: absolute; 
+    margin: 1px 3.5px; 
+}
+
+div#formulario .p_reset_senha:hover {
+    background-color: #b6b6b63f;
+}
+
+div#formulario .p_reset_senha {
+    margin: auto;
+}

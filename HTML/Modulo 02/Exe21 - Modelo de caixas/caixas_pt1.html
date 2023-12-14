@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas com as CSS</title>
+    <style>
+        body{
+            font: normal 17.5px Arial
+        }
+
+        #box-level {
+            /* Display: Inline (posiciona o elemento como uma linha) */
+            /* Display: Block (posiciona o elemento como um bloco)   */
+        
+            text-align: justify;
+            background-color: #f8de76;
+            color: #53460e;
+            /* "Border" detalhado v
+                                  v
+            border-style: solid;
+            border-width: 3px;
+            border-color:#53460e; */
+            
+            padding: 10px;
+
+            /* "Border" simplificado --> */ border: solid 3px #53460e;
+        }
+
+        #destaque {
+            border-style: solid;
+            padding: 5px;
+            text-align: center;
+            width: 500px;
+            background-color: white;
+        }
+
+        a {
+            border-style: solid;
+            border-color: #2E4974;
+            border-width: 2px;
+            padding: 2px;
+            text-decoration: none;
+            background-color: white;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        #inline-level {
+            text-align: justify;
+            margin-top: 20px;;
+            background-color: #AAC5F2;
+            color:#20324e;
+            border-style: solid;
+            border-width: 3px;
+            border-color:#2E4974;
+            /* "Padding" simplificado --> */padding: 10px;
+            outline-width: 3px;
+            outline-style: dashed;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Modelos de caixas nas CSS</h1>
+    <p>as caixas são um tipo de elemento presentes nas CSS, com elas é possível de criar
+        'espaços' entre as marcações definidas pelo HTML.
+    </p>
+    <p>Existem tipos de caixas, as 'Box-Level' e também as 'Inline-Level'.</p>
+
+    <div id="box-level">
+        <h3>Os níveis de título h1, h2, h3... São um tipo de caixa box-level, assim também como a marcação 'p' do HTML5</h3>
+        <p id="destaque">Exemplo de caixa 'box-level' - É separado por conteúdos</p>
+    </div>
+
+    <div id="inline-level">
+        <p>Os Links são um tipo de caixa Inline-Level. <a href="caixas_pt1_pg2.html" target="_blank">Eu sou uma Inline-Level level e fico entre uma marcação no HTML.</a> Isso significa que
+            o elemento visível estará na mesma linha que a marcação, como o 'p'.
+        </p>
+    </div>
+
+
+    <p>Cada tipo de box-level está destacado por uma borda</p>
+    <p>Dica ==>> PARA OBSERVAR O TIPO DE CAIXA DE UMA DETERMINADA MARCAÇÃO UTILIZE UMA BORDA EM VOLTA!</p>
+    <p>UTILIZE TAMBÉM A FERRAMENTE 'DEV-TOOLS'</p>
+    <p>E é isso :D</p>
+</body>
+</html>

@@ -1,0 +1,1 @@
+"Os dados foram ''enviados'', você pode aprender PHP ou JavaScript para saber o que fazer com eles!";

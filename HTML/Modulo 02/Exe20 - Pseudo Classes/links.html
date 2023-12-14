@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*  SELETORES PERSONALIZADOS
+            #   = ID
+            .   = Class
+            :   = PseudoClass
+            ::  = Pseudo-Element
+            >   = Children
+        */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: rgb(50, 96, 134);
+        }
+
+        a {
+            margin: 10px;
+            color: rgb(41, 79, 110);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:visited {
+            color: blueviolet;
+        }
+
+        a:hover {
+            background-color: white;
+            border-style: solid;
+            border-color: steelblue;
+            padding: 3px;
+            box-shadow: 0.2px 0.2px 5px saddlebrown;
+            border-radius: 5px;
+            border-width: 1.5px;
+            color: rgb(55, 103, 143);
+        }
+
+        a:active {
+            color: brown;
+        }
+
+        a::before {
+            content: '-->  ';
+        }
+
+        a::after {
+            content: '  ✔';
+        } 
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/LukinhaOs" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://www.google.com.br/" target="_blank">Google</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+        <li><a href="https://www.xbox.com/pt-br/play" target="_blank">Cloud Gaming Xbox</a></li>
+    </ul>
+</body>
+</html>

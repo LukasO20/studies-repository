@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* Modo portrait (retrato) */
+
+body {
+    /*background-color: orangered;*/
+    background-image: url('../imagens/cev-portrait.jpg');
+    background-position: center bottom;
+}
+
+p {
+    background-color: rgba(100, 148, 237, 0.897);
+}

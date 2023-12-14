@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro com formulário</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: rgba(128, 128, 128, 0.726);
+            border-bottom: solid rgba(70, 70, 70, 0.664);
+            text-align: center;
+            border-width: 3px;
+        }
+
+        form {
+            background-color: rgba(179, 179, 179, 0.425);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        form p {
+            color: rgb(72, 126, 207);
+            font-weight: 600;
+            width: 100px;
+        }
+
+        form input {
+            width: 180px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid rgba(70, 70, 70, 0.664);
+        }
+
+        form input:hover {
+            border-color: rgb(72, 126, 207);
+            transition: .2s ease;
+            color: rgba(70, 70, 70, 0.664);
+        }
+
+        form input#enviar, form input#limpar {
+            background-color: rgb(138, 175, 209);
+            border: none;
+            padding: 5px;
+            margin: 3px;
+            width: 100px;
+            position: relative;
+            left: 40px;
+        }
+
+        form input#enviar:hover, form input#limpar:hover {
+            color: rgb(51, 82, 110);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Formulário para cadastro com HTML</h1>
+    <form action="cadastro.js" method="get" autocomplete="on">
+        <p>
+            <label for="usuario">Usuário: </label>
+            <input type="text" name="usuario" id="usuario" placeholder="Digite o seu nome de usuário" required minlength="4" maxlength="15" autocomplete="current-password">
+        </p>
+        <p>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" placeholder="Digite a sua senha" minlength="5" required maxlength="10" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar" id="enviar">
+            <input type="reset" value="Limpar" id="limpar">
+        </p>
+    </form>
+</body>
+</html>

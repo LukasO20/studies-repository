@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas em HTML</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            height: 200px;
+            border-collapse: collapse;
+        }
+
+        tr.linha {
+            background-color: coral;
+        }
+
+        td {
+            text-align: center; /* Alinhamento horizontal */
+            border: 2px solid gray;
+            vertical-align: middle; /* Alinhamento vertical */
+        }
+
+        td#dado {
+            background-color: rgb(53, 143, 53);
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela </h1>
+    
+    <!--
+        Hierarquia (Simples)
+
+        TABLE = tabela
+        TABLE ROW = linha da tabela
+            TABLE HEADER = cabeça da tabela
+            TABLE DATA = dado da tabela
+    -->
+
+    <table>
+        <tr> <!-- <--- 1° Linha -->
+            <td>A1</td> <!-- '<td>' são células (onde ficará os dados) -->
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha"> <!-- <--- 2° Linha -->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr> <!-- <--- 3° Linha -->
+            <td>A3</td>
+            <td id="dado">B3</td>
+            <td>C3</td>
+        </tr>
+        <tr class="linha"> <!-- <--- 4° Linha -->
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+</body>
+</html>

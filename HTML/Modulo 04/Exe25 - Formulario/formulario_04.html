@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários - mais tipos</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+
+        h1 {
+            color: rgb(48, 46, 46);
+        }
+
+        fieldset:hover {
+            color: rgb(55, 169, 221);
+            transition: .2s ease;
+        }
+
+        fieldset input {
+            margin: 0px 0px 2px 2px;
+            padding: 2.5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulários outros tipos</h1>
+    <form action="cadastro.js" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" autocomplete="email" placeholder="Digite seu e-mail">
+            </p>
+            <p>
+                <label for="cel">Celular</label>
+                <input type="tel" name="cel" id="cel" autocomplete="tel" placeholder="(xx) xxxxx-xxxx"
+                pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
+                <!-- pattern são padrões para os números de telefone (pesquise na internet sobre o pattern do HTML para saber mais) -->
+            </p>
+            <p>
+                <input type="submit" value="Enviar dados">
+                <input type="reset" value="Apagar">
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+</html>

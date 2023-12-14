@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe - Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li {
+            list-style: circle;
+        }
+        li a {
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: cornflowerblue; 
+            font-weight: 600;
+        }
+
+        iframe {
+            border-radius: 10px;
+            border: 2.5px solid gray;
+            height: 350px;
+            width: 650px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolhas com iFrames</h1>
+    <p>Página que possui conteúdos com iFrames</p>
+
+    <ul>
+        <li>
+            <a href="pg01_iframe.html" target="iframe">Acessar página 01</a>
+        </li>
+        <li>
+            <a href="pg02_iframe.html" target="iframe">Acessar página 02</a>
+        </li>
+        <li>
+            <a href="pg03_iframe.html" target="iframe">Acessar página 03</a>
+        </li>
+    </ul>
+    <p><strong>Iframe</strong></p>
+    <iframe id="marca" name="iframe" srcdoc="<h1>Escolha uma das opções acima</h1>">
+        <p>Infelizmente o seu navegador não é compatível com iframe :/ </p>
+    </iframe>
+</body>
+</html>

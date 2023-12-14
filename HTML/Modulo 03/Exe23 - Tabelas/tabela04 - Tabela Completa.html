@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela detalhada e completa</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 20px;
+        }
+
+        table {
+            text-align: center;
+            width: 700px;
+            border-collapse: collapse;
+            box-shadow: 1px 1px 10px rgb(72, 51, 209);
+        }
+
+        td, th {
+            padding: 10px;
+            border: 2px solid slateblue;
+        }
+
+        caption {
+            font-weight: 600;
+            color: slateblue;
+            padding: 20px;
+            font-size: 1.3em;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Uma Tabela completa</h1>
+    <table>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Vingadores Ultimado</td>
+                <td>Toy Story</td>
+                <td>Frozen</td>
+            </tr>
+            <tr>
+                <td>Beatriz Zumbruzusky</td>
+                <td>Laranja Mecânica</td>
+                <td>Logan</td>
+                <td>Como Treinar seu Dragão 2</td>
+            </tr>
+            <tr>
+                <td>Larissa Arounche</td>
+                <td>Star Wars</td>
+                <td>Big hero</td>
+                <td>Cidades de Papel</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Claudio Oliver</td>
+                <td>Como Treinar seu Dragão</td>
+                <td>One Piece: Strong world</td>
+                <td>Exterminador do Futuro</td>
+            </tr>
+            <tr>
+                <td>Lucas Silva</td>
+                <td>A Silence Voice</td>
+                <td>Incríveis</td>
+                <td>Círculo de Fogo</td>
+            </tr>
+            <tr>
+                <td>Juan Hontoniêto</td>
+                <td>Vingadores Guerra Infinita</td>
+                <td>The Menu</td>
+                <td>Homem Aranha no Aranhaverso</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th colspan="4" scope="row">Total de filmes</th>
+            <td>018</td>
+        </tfoot>
+    </table>
+</body>
+</html>

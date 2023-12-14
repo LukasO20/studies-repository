@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Output</title>
+</head>
+<body>
+    <h1>Formulários com elementos Output</h1>
+    <form action="cadastro.js" method="get"4>
+        <fieldset>
+            <legend>Somando números</legend>
+            <p>
+                <label for="num1">1° número: </label>
+                <input type="number" name="num1" id="num1" placeholder="Exemplo: 1" required
+                oninput="soma.innerHTML = Number (num1.value) + Number (num2.value)">
+            </p>
+            <p>
+                <label for="num2">2° número: </label>
+                <input type="number" name="num2" id="num2" placeholder="Exemplo: 10" required
+                oninput="soma.innerHTML = Number (num1.value) + Number (num2.value)">
+            </p>
+            <p>
+                <label for="soma">O valor é: </label>
+                <output name="soma" id="soma">
+            </p>
+            <p>
+                <input type="submit" value="Enviar somar">
+                <input type="reset" value="Apagar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

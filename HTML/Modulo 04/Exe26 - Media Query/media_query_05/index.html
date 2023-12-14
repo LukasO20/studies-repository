@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu responsivo com media query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="tamanhoPagina()">
+    <header>
+        <h1>Responsividade com Media Query</h1>
+        <span class="material-icons" id="expandir" onclick="ExpandirMenu()">expand_more</span>
+        <menu id="itensMenu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Exercícios</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Planejamento</a></li>
+                <li><a href="">Desenvolvimento</a></li>
+                <li><a href="">Mais</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <section>
+            <h2>Exibindo conteúdos dos Menus</h2>
+            <article>
+                <p> Conteúdos desenvolvidos em HTML precisam ser adaptados a diferentes tipos de telas. Uma boa solução para o problema é se propor a utilizar os Midas Quiries.</p>
+                <p> Midia Query é uma tecnologia presente no CSS, como ele é possível de definir padrões de valores utilizando-se uma condição para determinada configuração. Exemplo: se desenvolver
+                    uma página tanto para tela maior como as de nootebooks, como para telas menores (smartphones), será necessário informar um pixel minímo ou máximo (depende do que realmente precisar).
+                </p>
+                <p class="p_code">
+                    media screen and (max-width: 375px) { <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; main { <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: 768px; <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;} <br>
+                        &nbsp; &nbsp;&nbsp;&nbsp;} <br><br>
+                    Nesse código acima, o meu elemento "main" terá uma largura máxima de 768px se por acaso a 
+                    largura do dispositivo que está executando esse HTML for no máximo 375px.
+                </p>
+                <div class="imagem"></div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Development by <b>LukinhasOs</b> - 2023</p>
+        <p>
+            <a href="https://github.com/LukinhaOs" target="_blank" title="conferir meu perfil do GitHub"><img src="imagem/logo-github.jpg"></a>
+        </p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function tamanhoPagina(){
+        if(window.innerWidth >= 768) {
+            itensMenu.style.display = 'block'
+        }
+        else{
+            itensMenu.style.display = 'none';
+        }
+    }
+
+    function ExpandirMenu() {
+        if (itensMenu.style.display == "block"){
+            itensMenu.style.display = "none";
+        }
+        else{
+            itensMenu.style.display = "block";
+        }
+    }
+</script>

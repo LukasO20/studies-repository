@@ -1,0 +1,43 @@
+body {
+    background-color: #EFB6FA;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #541461;
+}
+
+h2 {
+    color: #389476;
+}
+
+h1#Principal {
+    background-color: #662174;
+    text-align: center;
+    color: #f6d4fd;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1#Secundario {
+    text-align: center;
+    color: #f6d4fd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #541461;
+}
+
+h2.Terceario {
+    color: #f6d4fd;
+}
+
+h2.Background {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #541461;
+}

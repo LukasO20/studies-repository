@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Mesclagem 01</title>
+    <style>
+        body {
+         padding: 10px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+         font-size: 1.1em;
+        }
+
+        .tabela {
+            margin: auto;
+        }
+
+        table {
+            box-shadow: 2px 2px 15px steelblue;
+            text-align: center;
+            border-collapse: collapse;
+            height: 280px;
+            width: 380px;
+        }
+
+        td {
+            border: 2px solid steelblue;
+        }
+
+        .tabela {
+            width: 380px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Mesclagem 01</h1>
+    <div class="tabela">
+        <table>
+            <tr>
+                <td id="td01">Cél. 01</td>
+                <td id="td02">Cél. 02</td>
+                <td rowspan="2" id="td03">Cél. 03</td>
+                <td id="td04">Cél. 04</td>
+            </tr>
+            <tr>
+                <td id="td05">Cél. 05</td>
+                <td id="td06">Cél. 06</td>
+                <td id="td07">Cél. 07</td>
+                <tr>
+                    <td colspan="3" id="td08">Cél. 08</td>
+                    <td id="td09">Cél. 09</td>
+                </tr>
+            </tr>
+            <tr>
+                
+                <td rowspan="2" id="td10">Cél. 10</td>
+                <td colspan="2" id="td11">Cél. 11</td>
+                <td id="td12">Cél. 12</td>
+            </tr>
+            <tr>
+                <td id="td13">Cél. 13</td>
+                <td id="td14">Cél. 14</td>
+                <td id="td15">Cél. 15</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

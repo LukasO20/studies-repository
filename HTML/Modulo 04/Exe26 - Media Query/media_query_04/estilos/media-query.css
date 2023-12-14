@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* Versão demais midias */
+
+
+/* Typical devices breakpoint
+
+Telas pequenas: 600px -
+Smartphone: 600px - 768px
+Tablet: 768px - 992px
+Desktop: 992px - 1200px
+Grande telas: 1200px +
+
+*/
+
+@media print {
+    body {
+        background-image: url(../imagens/back-print.jpg);
+        font-family: sans-serif;
+    }
+
+    h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main:after {
+        text-align: justify;
+        content: 'Esta impressão é usada para testes com o Media query (adaptação de telas)';
+    }
+
+    img#phone {display: none;}
+    img#print {display: block;}
+    img#tablet {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (max-width: 600px){
+    /* <--- Desnecessário - HTML desenvolvido com Mobile First */
+} 
+
+@media screen and (min-width: 768px) and (max-width: 768px){
+    /* <--- Desnecessário - HTML desenvolvido com Mobile First */
+}
+
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;}
+    img#print {display: none;}
+    img#tablet {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/* desktop */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {display: none;}
+    img#print {display: none;}
+    img#tablet {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+
+    main {
+        width: 600px;
+    }
+}
+
+/* bigger screen */
+@media screen and (min-width: 1200px){
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone {display: none;}
+    img#print {display: none;}
+    img#tablet {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+
+    main {
+        width: 800px;
+    }
+}

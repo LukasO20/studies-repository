@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com Hover</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 120, 70);
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            font-weight: 600;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: dodgerblue;
+            text-shadow: 0.2px 0.2px 2px rgb(14, 60, 105);
+        }
+
+        p#escondido {
+            text-align: center;
+            background-color: dodgerblue;
+            margin-top: 30px;
+            border-radius: 10px;
+            padding: 50px;
+            display: none;
+        }
+
+        div:hover > p#escondido {
+            display: block;
+        }
+
+        div:hover > p#mostra {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mais um poquinho de Hover</h1>
+    <div>
+        Exibindo Div's com Hover
+        <p>Passe o Mouse em cima do bloco O.O</p>
+    </div>
+    <div>
+        <p id="mostra">Passe o Mouse em mim >:(</p>
+        <p id="escondido">
+            Eu estava escondido ;D
+        </p>
+    </div>
+</body>
+</html>

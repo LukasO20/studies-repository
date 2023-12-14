@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* --- ESTILOS PARA TELAS --- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: rgba(29, 88, 155, 0.61);
+    padding: 10px;
+    color: white;
+}
+
+header menu {
+    background-color: rgba(50, 50, 50, 0.473);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header menu li {
+    display: inline-block;
+    background-color: white;
+    color: rgba(29, 88, 155, 0.61);
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+article {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+}
+
+article h2 {
+    text-align: center;
+}
+
+article p {
+    text-align: center;
+}

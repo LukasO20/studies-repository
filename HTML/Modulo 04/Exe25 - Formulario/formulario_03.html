@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos em formulários</title>
+</head>
+<body>
+    <h1>Elementos do formulário</h1>
+    <form action="cadastro.js" method="get" autocomplete="on">
+        <p>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" maxlength="50" placeholder="Digite seu nome completo">
+        </p>
+        <p>
+            <label for="idade">Idade</label>
+            <input type="number" nome="idade" id="idade" min="1" max="120" placeholder="Sua idade" step="1" style="width:  80px;"> 
+        </p>
+        <p>
+            <label for="mes">Calendário do aniversário</label>
+            <input type="month" name="mes" id="mes" value="2023-06">
+        </p>
+        <p>
+            <label for="dia">Dia atual</label>
+            <input type="date" name="dia" id="dia">
+        </p>
+        <p>
+            <label for="hora">Horário atual</label>
+            <input type="time" name="hora" id="hora"> 
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
