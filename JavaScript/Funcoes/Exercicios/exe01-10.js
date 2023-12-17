@@ -30,3 +30,5 @@ const meuCalculo = Operador(10, 5, '*')
 console.log(meuCalculo)
 
 // Exe 02
+
+//EM BREVE...
