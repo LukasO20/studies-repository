@@ -1,4 +1,5 @@
 //Arrow functions - Exercícios
+//PAUSADO (POR ENQUANTO) - NÃO FIZ POR NÃO TER NECESSIDADE
 
 // Exe 01
 
