@@ -1,0 +1,8 @@
+Para instalar pelo terminal com npm do NODE seguimos sempre essa sintaxe
+
+"nom intall" buscar um pacote online e efetuar a instalação
+
+npm intall --save-dev axios@0.17.1 ~E
+
+Curiosidades da sintaxe
+"~" - Significa versão aproximada
