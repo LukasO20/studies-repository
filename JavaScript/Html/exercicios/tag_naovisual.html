@@ -1,0 +1,47 @@
+<h1>Tags não visuais</h1>
+
+<!-- TAGS semanânticas -->
+<!--
+    section - agrupamento de conteúdo por seções
+    article - conteúdo próprio não necessariamente relacionado ao conteúdo principal
+    header - cabeçalho do documento
+    footer - rodapé do documento
+    nav - agrupamento de links para navegação
+    aside - relação com conteudo principal o qual geralmente se posiciona aos lados
+    details - detalhes do conteúdo
+-->
+
+<!-- TAGS sem semântica -->
+<!--
+    div - divisão de seção
+    span - agrupamento inline (mesma linha)
+-->
+
+<div>
+    Área 1
+</div>
+<div>
+    Área 2
+</div>
+
+<p>As div's são elementos com <span class="destaque">display block</span>, elas não fica em mesma linha por padrão</p>
+
+<style>
+    p, div {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    div {
+        display: inline;
+    }
+
+    span {
+        display: block;
+    }
+
+    span.destaque {
+        font-weight: 600;
+        font-size: 1.5em;
+        color: brown;
+    }
+</style>

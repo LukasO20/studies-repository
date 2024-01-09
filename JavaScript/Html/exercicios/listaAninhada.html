@@ -1,0 +1,47 @@
+<h1>Projeto</h1>
+<ul>
+    <li>
+        <span jsfolder>backend</span>
+        <ul>
+            <li>
+                <span jsfolder>app</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>venda.js</li>
+                    <li>itens.js</li>
+                </ul>
+            </li>
+            <li>
+                <span jsfolder>config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>status.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span jsfolder>frontend</span>
+        <ul>
+            <li>
+                <span jsfolder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.hml</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    document.querySelectorAll('[jsfolder]').forEach(folder =>  {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        } 
+    })
+</script>
