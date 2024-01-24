@@ -6,6 +6,29 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /*
+            Em linhas gerias...
+
+            1. regra com !important
+            2. seletores mais específicos (de preferência)
+            3. última regra processada (empate)
+        */
+
+        p {  /* especificidade nível 1 (menos importante) */
+            background-color: #aaa;
+        }
+
+        .observacao { /* especificidade nível 2 (importante) */
+            font-size: 40px;
+            background-color: #a88;
+            padding: 10px;
+        }
+
+        p.observacao { /* especificidade nível 3 (mais importante) */
+            padding: 5px;
+        }
+
+        /* Nesse caso acima, será considera a especificidade nível 3 pois é a mais importante */
     </style>
 </head>
 
