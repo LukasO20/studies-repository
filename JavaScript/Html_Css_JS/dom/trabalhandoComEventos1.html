@@ -9,9 +9,23 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick="navegate(event)" -->
+        <a href="https://google.com.br" js-wait>Google</a>
     </div>
     <script>
-        // ...
+        function navegate(e) {
+            e.preventDefault()
+            console.log('Saindo em 5 seg....')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        // const a = document.querySelector('a')
+        // a.onclick = navegate
+
+        const a = document.querySelector('[js-wait]')
+        a.onclick = navegate
     </script>
 </body>
