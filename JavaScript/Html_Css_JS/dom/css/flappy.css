@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 700px;
+    width: 1200px;
+    margin: 15px;
+    background-color: skyblue;
+    overflow: hidden;
+}
+
+.bird {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 25px);
+    bottom: 50%;
+}
+
+.pipe-bars {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;    
+}
+
+.pipe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.pipe-head {
+    background: linear-gradient(rgb(26, 107, 26), rgb(34, 140, 34));
+    border: 2px solid rgb(26, 107, 26);
+    height: 30px;
+    width: 130px;
+}
+
+.pipe-body {
+    background: linear-gradient(rgb(26, 107, 26), rgb(34, 140, 34));
+    border-left: 2px solid rgb(17, 73, 17);
+    border-right: 2px solid rgb(17, 73, 17);
+    height: 120px;
+    width: 110px;
+}
+
+.counter {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'Pixel';
+    font-size: 2em;
+    font-weight: 600;
+    z-index: 1;
+}
