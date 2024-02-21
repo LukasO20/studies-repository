@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+    <script>
+        function Ajax(config){
+            const xhr = new XMLHttpRequest()
+            xhr.open(config.metodo, config.url, true)
+
+            xhr.onload = e => {
+                if (xhr.status === 200) {
+                    config.sucesso(xhr.response)
+                } else if (xhr.status >= 400) {
+                    config.erro({
+                        code: xhr.status,
+                        texto: xhr.statusText
+                    })
+                }
+            }
+
+            xhr.send()
+        }
+
+        Ajax({
+            url: 'dados/estados.json',
+            metodo: 'get',
+            sucesso(resposta) {
+                const dados = JSON.parse(resposta)
+                CreateTable(dados)
+            },
+            erro(e) {
+                const msg = document.createTextNode(`${e.code}: ${e.texto}`)
+                document.body.appendChild(msg)
+            }
+        })
+
+        function CreateTable(dados) {
+            const linhas = dados.map(dado => {
+                const tdID = document.createElement('td')
+                tdID.innerHTML = dado.id
+
+                const tdNome = document.createElement('td')
+                tdNome.innerHTML = dado.nome
+
+                const tdSigla = document.createElement('td')
+                tdSigla.innerHTML = dado.sigla
+
+                const tr = document.createElement('tr')
+
+                tr.appendChild(tdID)
+                tr.appendChild(tdNome)
+                tr.appendChild(tdSigla)
+
+                return tr
+            })
+
+            const tabela = document.createElement('table')
+            linhas.forEach(dados_linha => tabela.appendChild(dados_linha))
+            document.body.appendChild(tabela)
+        }
+    </script>
+</body>
