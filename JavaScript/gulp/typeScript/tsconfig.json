@@ -1,6 +1,7 @@
 {
     "files": [
-        "src/**/*.ts"
+        "src/app.ts",
+        "src/produto.ts"
     ],
     "compilerOptions": {
         "rootDir": "src",
