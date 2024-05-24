@@ -1,0 +1,17 @@
+.button {
+    background-color: $cor-btn-stock;
+    color: $cor-font-btn-stock;
+    padding: 1em;
+    border: none;
+    box-shadow: 1px 1px 10px 2px rgb(87, 122, 87);
+    margin: 1em;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        background-color: $cor-btn-stock-hover;
+        cursor: pointer;
+    }
+}

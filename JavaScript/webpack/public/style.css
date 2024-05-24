@@ -1,0 +1,21 @@
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/css/style.css ***!
+  \*******************************************************************************************************************/
+body {
+  background-color: #71a371;
+  background-image: url(ee510fe8df73927cac02a9cea0922f34.jpg);
+  /* photo from Pixabay: https://www.pexels.com/pt-br/foto/gatinhos-de-cores-sortidas-45170/ */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100dvh; }
+
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/index.scss ***!
+  \*********************************************************************************************************************/
+.button {
+  background-color: rgba(34, 163, 103, 0.815);
+  color: white;
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600; }
+

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(113, 163, 113);
+    background-image: url(../imgs/pexels-pixabay-45170.jpg); /* photo from Pixabay: https://www.pexels.com/pt-br/foto/gatinhos-de-cores-sortidas-45170/ */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100dvh;
+}

@@ -9,6 +9,39 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/assets/css/style.css":
+/*!**********************************!*\
+  !*** ./src/assets/css/style.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/assets/css/style.css?");
+
+/***/ }),
+
+/***/ "./src/assets/scss/index.scss":
+/*!************************************!*\
+  !*** ./src/assets/scss/index.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/assets/scss/index.scss?");
+
+/***/ }),
+
+/***/ "./src/assets/index.js":
+/*!*****************************!*\
+  !*** ./src/assets/index.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/assets/css/style.css\");\n/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/index.scss */ \"./src/assets/scss/index.scss\");\n\r\n\n\n//# sourceURL=webpack://webpack/./src/assets/index.js?");
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
@@ -16,7 +49,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pessoa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pessoa */ \"./src/pessoa.js\");\n/* harmony import */ var _pessoa__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_pessoa__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst atendente = new (_pessoa__WEBPACK_IMPORTED_MODULE_0___default())\r\nconsole.log(atendente.cumprimentar())\n\n//# sourceURL=webpack://webpack/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pessoa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pessoa */ \"./src/pessoa.js\");\n/* harmony import */ var _pessoa__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_pessoa__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets */ \"./src/assets/index.js\");\n\r\n\r\n\r\nconst atendente = new (_pessoa__WEBPACK_IMPORTED_MODULE_0___default())\r\nconsole.log(atendente.cumprimentar())\n\n//# sourceURL=webpack://webpack/./src/main.js?");
 
 /***/ }),
 
