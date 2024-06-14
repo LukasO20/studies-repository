@@ -15,6 +15,25 @@
     <div id='conteudo3'></div>
 
     <script>
-        // ...
-    </script>
+        //Conteudo 1
+        $('#conteudo1').append('<p>1</p>')
+
+        //Conteudo 2 
+        const elementos = [
+            $('<li></li>').append('Arroz'),
+            $('<li></li>').append('Feijão'),
+            $('<li></li>').append('Batata')
+        ]
+
+        const lista = $('<ul><li>Sorvete</li></ul>').prepend(elementos)
+        $('#conteudo2').append(lista)
+
+        //Conteudo 3
+        $('#conteudo3').append('<h2>title2</h2>', '<h3>title3</h3>')
+            .prepend('<h1>title1</h1>')
+        $('#conteudo3').html('<h1> 1 2 3 </h1>')
+        
+        // Altera todos
+        $('div[id]').css('border', 'solid 2px orange')
+</script>
 </body>

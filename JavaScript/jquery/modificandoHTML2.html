@@ -17,6 +17,23 @@
     <p class='numero'>5</p>
 
     <script>
-        // ...
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+
+        $('<span>, 3</span>').appendTo('#div1')
+        $('<span>-1, </span>').prependTo('#div1')
+
+        $('#div1').before('<p> Before div1 </p>')
+        $('#div1').after('<p> After div1 </p>')
+
+        $('<p> Before div2 </p>').insertBefore('#div2')
+        $('<p> After div2 </p>').insertAfter('#div2')
+
+        $('p.numero').wrapAll('<div id="div4">')
+
+        $('body > p').replaceWith('<div> substituto p </div>')
+        // $('body > p').replaceWith(function () {
+        //     return $('<div>').html($(this).html())
+        // })
     </script>
 </body>

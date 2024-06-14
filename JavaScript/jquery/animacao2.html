@@ -13,7 +13,7 @@
             color: #000;
         }
 
-        div {
+        .animate {
             position: absolute;
             display: inline;
             border: solid 10px #000;
@@ -25,9 +25,37 @@
 </head>
 
 <body>
-    <div>Animar!</div>
+    <div class="animate">Animar!</div>
 
     <script>
-        // ...
+        function AnimateLagura(valor, duracao, callback) {
+            $('.animate').animate({ width: `+=${valor}` }, duracao, callback)
+            $('.animate').css('background-color', 'forestgreen')
+        }
+
+        function AnimateDiagonal(valor, duracao, callback) {
+            $('.animate').animate({ top: `+=${valor}`, left: `+=${valor}` }, duracao, callback)
+            $('.animate').css('background-color', 'darkgray')
+            $('.animate').html('Diagonal!')
+        }
+
+        function AnimateRotacao(valor, duracao, callback) {
+            $('.animate').animate( {transform: `+=${valor}`}, {
+                step: function (valor) {
+                    $(this).css(`transform`, `rotate(${valor}deg)`)
+                },
+                duration: duracao
+            }, 'linear', callback)
+            $('.animate').css('background-color', 'cadetblue')
+            $('.animate').html('Rotação!')
+        } 
+
+        AnimateLagura(400, 800, () => {
+            AnimateLagura(-400, 800, () => {
+                AnimateDiagonal(200, 500, () => {
+                    AnimateRotacao(360, 800)
+                })
+            })
+        })
     </script>
 </body>

@@ -49,6 +49,24 @@
     </form>
 
     <script>
-        $('#feira').addClass('destaque')
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('li').addClass('destaque')
+        $('[wm-obrigatorio]').removeClass('destaque')
+        $('li.opcional').removeClass('destaque')
+        $('div p span').addClass('destaque')
+
+        //Exclusivos jQuery
+        $('li:first').css('border', 'solid 0.5em orange')
+        $('li:odd').css('border', 'solid 0.75em green')
+        $('li:gt(1)').css('border', 'solid 2px darkgray')
+        $('li:not(:last)').css('background-color', 'purple')
+        $('li:contains("ão")').css('background-color', 'brown')
+
+        $('form *').hide()
+        $('form :text').show().css('color', 'darkgray')
+        $('form :password').show().css('background-color', 'rgba(128, 0, 128, 0.75)').css('border', 'none')
+        $('form :checkbox').show().css('height', '1em').css('width', '1em')
+        $('form :radio').show().css('height', '1em').css('width', '1em')
+        $('form :file').show()
     </script>
 </body>

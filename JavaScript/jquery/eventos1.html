@@ -17,9 +17,39 @@
     <h1>Eventos #01</h1>
     <div id='posicao'></div>
     <div id='cliques'>Cliques: 0</div>
-    <input type="text" placeholder="Cor de Background">
+    <input type="text" placeholder="Type hexa color here">
 
     <script>
-        // ...
+        function movimentoMouse(e) {
+            $('#posicao').html(`X: ${e.clientX} Y: ${e.clientY}`)
+        }
+
+        $('body').on('mousemove', movimentoMouse)
+
+        $('#posicao').mouseover(e => {
+            $('body').off('mousemove', movimentoMouse)
+        })
+
+        $('#posicao').mouseleave(e => {
+            $('body').on('mousemove', movimentoMouse)
+        })
+
+        let click = 0
+        $('body').click(e => {
+            $('#cliques').html(`Cliques: ${++click}`)
+        })
+
+        const stockBackgroundColor = $('body').css('background-color')
+
+        $('input').keyup(function (e) {
+            const valorCor = $(this).val()
+            if (valorCor.match(/#[\da-fA-F]{3,6}/)) {
+                $('body').css('background-color', `${valorCor}`)
+            } else {
+                $('body').css('background-color', `${stockBackgroundColor}`)
+            }
+        })
+
+        $('body').find('input').css('text-align', 'center')
     </script>
 </body>
