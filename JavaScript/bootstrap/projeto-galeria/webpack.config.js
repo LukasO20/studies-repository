@@ -1,52 +1,64 @@
-const modoDev = process.env.NODE_ENV !== 'production'
+const devMode = process.env.NODE_ENV !== 'production'
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const TerserPuglin = require('terser-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const FileManagerPlugin = require('filemanager-webpack-plugin')
+const path = require('path')
 
 module.exports = {
-    mode: modoDev ? 'development' : 'production',
+    mode: devMode ? 'development' : 'production',
+    devtool: devMode ? 'source-map' : 'inline-source-map',
     entry: './src/index.js',
+    output: {
+        filename: 'app.js',
+        path: devMode ? path.resolve(__dirname, 'build') : path.resolve(__dirname, 'src'),
+        publicPath: '/'
+    },
     devServer: {
-        contentBase: './build',
-        port: 9000,
+        static: {
+            directory: path.resolve(__dirname, 'src'),
+        },
+        port: 5500,
+        hot: true,
+        open: true
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true
+            new TerserPuglin({
+                terserOptions: {
+                    compress: {
+                        drop_console: true,
+                    }
+                },
             }),
-            new OptimizeCSSAssetsPlugin({})
+            new CssMinimizerPlugin()
         ]
     },
-    output: {
-        filename: 'app.js',
-        path: __dirname + '/build'
-    },
     plugins: [
-        new MiniCssExtractPlugin({ filename: 'estilo.css' }),
-        new CopyWebpackPlugin([
-            { context: 'src/', from: '**/*.html' },
-            { context: 'src/', from: 'imgs/**/*' }
-        ])
+        new MiniCssExtractPlugin({ filename: 'estilo.css'}),
+        new FileManagerPlugin({
+            events: {
+                onEnd: {
+                    copy: [
+                        { source: 'src/**/*.html', destination: 'build/' },
+                        { source: 'src/imgs/**/*', destination: 'build/imgs' }
+                    ]
+                }
+            }
+        }),
     ],
     module: {
-        rules: [{
+        rules:[{
             test: /\.s?[ac]ss$/,
             use: [
                 MiniCssExtractPlugin.loader,
-                // 'style-loader', // Adiciona CSS a DOM injetando a tag <style>
-                'css-loader', // interpreta @import, url()...
-                'sass-loader',
+                //'style-loader', // Adiciona a CSS na DOM injetando <style>
+                'css-loader', // interpreter - @import, url()...
+                'sass-loader' 
             ]
         }, {
-            test: /\.(png|svg|jpg|gif)$/,
-            use: ['file-loader']
-        }, {
-            test: /.(ttf|otf|eot|svg|woff(2)?)$/,
+            test: /\.(png|jpg|gif|svg)$/,
             use: ['file-loader']
         }]
     }
