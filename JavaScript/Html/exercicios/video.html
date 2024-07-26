@@ -1,0 +1,50 @@
+<video id="jsvideo" width="800" height="450" controls autoplay controlsList="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta esse vídeo
+</video>
+
+<div js-progresso="jsvideo" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button js-play="jsvideo">Play</button>
+    <button js-pause="jsvideo">Pause</button>
+</div>
+
+<style>
+
+    .progresso {
+        height: 15px;
+        width: 400px;
+        border: 1px solid cornflowerblue;
+        margin: 15px;
+    }
+
+    .progresso div {
+        background-color: cornflowerblue;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
+
+<script>
+    function configJSVideo(id) {
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+
+        document.querySelector(`[js-play = ${id}]`).onclick = e => video.play()
+        document.querySelector(`[js-pause = ${id}]`).onclick = e => video.pause()
+    
+        setInterval(() => {
+            const percentual = (video.currentTime / video.duration) * 100
+            const barraDiv = document.querySelector(`[js-progresso = ${id}] > div`)
+            barraDiv.style.width = `${percentual}%`
+        }, 150);
+    }
+
+    configJSVideo('jsvideo')
+</script>
