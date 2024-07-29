@@ -11,14 +11,15 @@ import ReactDOM from 'react-dom'
 import Pai from './componentes/Pai'
 import Filho from './componentes/Filho'
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
     <div>
-        <Pai nome="Roberson" sobrenome="Silva">
+        <Pai nome="Roberson" sobrenome="Silva Junior">
             <Filho nome="Pedro" sobrenome="Silva"/>
             <Filho nome="Paulo" sobrenome="Silva"/>
             <Filho nome="Juana" sobrenome="Silva"/>
         </Pai>
     </div>
-, document.getElementById('root'))
+)
 
 //Obs: const element = <h1>Esse código parece HTML mas não é HEHEHEHE</h1>
