@@ -1,0 +1,20 @@
+:root {
+    --bg-button: rgb(240, 240, 240);
+    --bg-button-hover: rgb(185, 185, 185);
+} 
+
+.button {
+    font-size: 1.5em;
+    background-color: var(--bg-button);
+    border: none;
+    outline: none;
+    margin: 0.1em;
+    border-radius: 0.25em;
+    transition: .3s ease-in-out;
+    color: rgb(75, 75, 75);
+}
+
+.button:hover {
+    background-color: var(--bg-button-hover);
+    cursor: pointer;
+}
