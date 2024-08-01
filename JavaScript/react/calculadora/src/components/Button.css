@@ -18,3 +18,21 @@
     background-color: var(--bg-button-hover);
     cursor: pointer;
 }
+
+.button.double {
+    grid-column: span 2;
+}
+
+.button.triple {
+    grid-column: span 3;
+}
+
+.button.operation {
+    background-color: rgb(103 149 255);
+}
+
+.button:active {
+    transition: .1s ease-in-out;
+    background-color: rgb(65, 65, 65);
+    color: rgb(255, 255, 255);
+}
