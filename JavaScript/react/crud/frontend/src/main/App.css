@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --bg-dark: rgb(59, 100, 153);
+
+    --logo-height: 80px;
+    --header-height: 100px;
+    --menu-top-height: 70px;
+    --aside-width: 160px;
+    --footer-height: 40px;
+
+    --shadow: 
+        0 2px 23px 0 rgba(0, 0, 0, 0.07),
+        0 2px 49px 0 rgba(0, 0, 0, 0.02);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Arial', 'sans-serif';
+}
+
+/* Layout Grid */
+
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr;
+    grid-template-rows: 
+        var(--header-height)
+        1fr
+        var(--footer-height);
+    grid-template-areas: 
+        "logo header"
+        "menu-area content"
+        "menu footer";
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+aside.logo {
+    grid-area: logo;
+}
+
+header.header {
+    grid-area: header;
+}
+
+aside.menu-area {
+    grid-area: menu-area;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer {
+    grid-area: footer;
+}
