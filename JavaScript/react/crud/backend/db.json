@@ -1,11 +1,24 @@
 {
-    "users": [{
-        "id": 1,
-        "name": "Larissa Aloisa Silva",
-        "email": "LariO@gmail.com"
-    }, {
-        "id": 2,
-        "name": "Lucas de Oliveira",
-        "email": "lukinO@gmail.com"
-    }]
+  "users": [
+    {
+      "name": "Larissa Aloisa Pereira Silva",
+      "email": "LariO@gmail.com.br",
+      "id": 1
+    },
+    {
+      "name": "Lucas de Oliveira Silva",
+      "email": "lukinhaso2206@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Jorge",
+      "email": "teste123@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Minha meta - Luana",
+      "email": "luanateste123@gmail.com",
+      "id": 4
+    }
+  ]
 }
