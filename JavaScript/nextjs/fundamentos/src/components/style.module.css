@@ -1,0 +1,39 @@
+.layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    background-color: #7a7a7a;
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho a {
+    background-color: rgb(223, 57, 57);
+    padding: 0.5em;
+    border-radius: 0.35em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.content {
+    height: 100%;
+    padding: 1em;
+}
+
+.buttonStandard {
+    padding: 0.5em;
+    border-radius: 0.35em;
+    margin: 0.5em;
+    border: none;
+    background-color: rgb(8, 60, 202);
+}
+
+.buttonStandard:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
