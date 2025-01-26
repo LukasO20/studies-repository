@@ -5,18 +5,26 @@ import Cliente from "@/src/core/Cliente"
 import Tabela from "@/src/components/Tabela"
 import Botao from "@/src/components/Botao"
 import Formulario from "@/src/components/Formulario"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import ClienteRepositorio from "@/src/core/ClienteRepositorio"
+import ColecaoCliente from "@/src/api/db/ColecaoCliente"
 
 export default function Home() {
 
+  const repo: ClienteRepositorio = new ColecaoCliente()
+
   const [cliente, setCliente] = useState<Cliente>(Cliente.vazio())
+  const [clientes, setClientes] = useState<Cliente[]>([])
   const [visivel, setVisivel] = useState<'tabela' | 'form'>('tabela')
 
-  const clientes = [
-    new Cliente('Luana', 26, '1'),
-    new Cliente('Marcelo', 44, '2'),
-    new Cliente('Juan', 30, '3')
-  ].map(cliente => cliente.toPlainObject())
+  useEffect(loadClientes, [])
+
+  function loadClientes() {
+    repo.obterDados().then(clientes => {
+      setClientes(clientes)
+      setVisivel('tabela')
+    })
+  }
 
   function clienteSelecionado(cliente: Cliente) { 
     setCliente(cliente)
@@ -32,9 +40,9 @@ export default function Home() {
     setVisivel('form')
   }
 
-  function salvarCliente (cliente: Cliente) {
-    console.log(cliente)
-    setVisivel('tabela')
+  async function salvarCliente (cliente: Cliente) {
+    await repo.salvar(cliente)
+    loadClientes()
   }
 
   return (
