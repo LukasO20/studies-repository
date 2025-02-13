@@ -1,51 +1,60 @@
-import firebase from '../config'
-import ClienteRepositorio from '../../core/ClienteRepositorio'
-import Cliente from '../../core/Cliente'
-
-export default class ColecaoCliente implements ClienteRepositorio {
-
+import { 
+    collection, 
+    getDocs, 
+    addDoc, 
+    doc, 
+    setDoc, 
+    deleteDoc, 
+    getDoc, 
+    Firestore, 
+    QueryDocumentSnapshot, 
+    SnapshotOptions 
+  } from 'firebase/firestore'
+  import { db } from '@/src/api/config'
+  
+  import ClienteRepositorio from '../../core/ClienteRepositorio'
+  import Cliente from '../../core/Cliente'
+  
+  export default class ColecaoCliente implements ClienteRepositorio {
     #conversor = {
-        toFirestore(cliente: Cliente) {
-            return {
-                nome: cliente.nome,
-                idade: cliente.idade
-            }
-        },
-        fromFirestore(snapshot: firebase.firestore.QueryDocumentSnapshot, options: firebase.firestore.SnapshotOptions): Cliente {
-            const dados = snapshot.data(options)
-            return new Cliente(dados.nome, dados.idade, snapshot.id)
+      toFirestore(cliente: Cliente) {
+        return {
+          nome: cliente.nome,
+          idade: cliente.idade,
         }
-   }
-
+      },
+  
+      fromFirestore(snapshot: QueryDocumentSnapshot, options: SnapshotOptions): Cliente {
+        const dados = snapshot.data(options)
+        return new Cliente(dados.nome, dados.idade, snapshot.id)
+      }
+    }
+  
     async salvar(cliente: Cliente): Promise<Cliente> {
-        if (cliente?.id) {
-            await this.colecao().doc(cliente.id).set(cliente)
-            return cliente
+      if (cliente?.id) {
+        const ref = doc(db, 'clientes', cliente.id).withConverter(this.#conversor)
+        await setDoc(ref, cliente)
+        return cliente
+      } else {
+        const docRef = await addDoc(collection(db, 'clientes').withConverter(this.#conversor), cliente)
+        const docSnap = await getDoc(docRef)
+        if (docSnap.exists()) {
+          return docSnap.data()
         } else {
-            const docRef = await this.colecao().add(cliente)
-            const doc = (await docRef.get()).data()
-            if (doc) {
-                return doc
-            } else {
-                throw new Error("'Cliente' is missing!")
-            }
+          throw new Error('Erro ao salvar o cliente!')
         }
+      }
     }
-
+  
     async excluir(cliente: Cliente): Promise<void> {
-        if (cliente?.id) {
-            return this.colecao().doc(cliente.id).delete()
-        }
+      if (cliente?.id) {
+        await deleteDoc(doc(db, 'clientes', cliente.id))
+      }
     }
-
+  
     async obterDados(): Promise<Cliente[]> {
-        const query = await this.colecao().get()
-        return query.docs.map(doc => doc.data()) ?? []
+      const querySnapshot = await getDocs(collection(db, 'clientes').withConverter(this.#conversor))
+      return querySnapshot.docs.map((doc) => doc.data()) ?? []
     }
-
-    private colecao() {
-        return firebase
-            .firestore().collection('clientes')
-            .withConverter(this.#conversor)
-    }
-}
+  }
+  
