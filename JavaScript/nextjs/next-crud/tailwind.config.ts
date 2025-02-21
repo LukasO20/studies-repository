@@ -7,9 +7,9 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   safelist: [
-    /^bg-/,
-    /^to-/,
-    /^from-/
+    { pattern: /^bg-/},
+    { pattern: /^to-/},
+    { pattern: /^from-/}  
   ],
   theme: {
     extend: {
