@@ -1,0 +1,19 @@
+{
+    "products": [
+    {
+        "id": 1,
+        "name": "Backpack",
+        "price": 65.56
+    },
+    {
+        "id": 2,
+        "name": "Notebook alien ware",
+        "price": 8750.00
+    },
+    {
+        "id": 3,
+        "name": "Iphone 12 Pro",
+        "price": 8800.00
+    }
+    ]
+}
