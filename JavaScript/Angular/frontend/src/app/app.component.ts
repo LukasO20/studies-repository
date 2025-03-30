@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/template/header/header.component'
 import { FooterComponent } from './components/template/footer/footer.component'
 import { NavComponent } from './components/template/nav/nav.component'
+import { RedDirective } from './directives/red.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, NavComponent, FooterComponent],
+  imports: [HeaderComponent, NavComponent, FooterComponent, RedDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
