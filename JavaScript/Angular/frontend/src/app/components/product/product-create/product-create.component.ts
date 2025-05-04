@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../product.service';
-import { Router } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
 import { Product } from '../product.model';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-product-create',
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, FormsModule, MatFormFieldModule, MatInputModule, MatCardModule],
   templateUrl: './product-create.component.html',
   styleUrl: './product-create.component.scss',
 })
@@ -20,8 +24,8 @@ export class ProductCreateComponent {
     }
 
     product: Product = {
-      name: 'Angular Test product',
-      price: 1950.89
+      name: '',
+      price: undefined
     }
 
     createProduct(): void {

@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { ForDirective } from '../../directives/for.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [MatCardModule, ForDirective],
+  imports: [MatCardModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
