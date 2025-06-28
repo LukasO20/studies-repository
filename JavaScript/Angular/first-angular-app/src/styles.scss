@@ -3,11 +3,13 @@
 }
 
 body {
+    overflow: hidden;
 
     app-root {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
-        place-items: center;
         gap: 1rem;
+        height: 100vh;
+        place-items: center;
     }
 }

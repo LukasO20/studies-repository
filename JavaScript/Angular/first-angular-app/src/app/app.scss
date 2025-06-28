@@ -20,13 +20,22 @@ main {
         }
     }
 
-    :nth-child(1) {
+    > ul {
         flex: 1;
     }
 
-    :nth-child(2) {
+    app-tasks {
         display: flex;
         justify-content: center;
         flex: 2;
+    }
+
+    p {
+        padding: 1rem;
+        color: #3274d6;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1rem;
     }
 }
