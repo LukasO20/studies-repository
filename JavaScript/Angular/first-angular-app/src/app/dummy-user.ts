@@ -19,8 +19,8 @@ export const DUMMY_USER = [
         name: 'Robert Robber',
         avatar: 'user04.png',
     },
-        {
-        id: 4,
+    {
+        id: 5,
         name: 'Oliver Boston',
         avatar: 'user05.png',
     }
