@@ -1,27 +1,36 @@
-div > button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #3274d6;
-    border: none;
-    padding: 0.75rem 2rem;
-    border-radius: 1rem;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .1s ease-in-out;
+div {
 
-    img {
-        width: 28px;
-        border-radius: 50%;
+    button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #3274d6ac;
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 1rem;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .1s ease-in-out;
+
+        img {
+            width: 28px;
+            border-radius: 50%;
+        }
+
+        span {
+            display: inline-flex;
+            width: 100px;
+        }
+
+        &:hover {
+            background-color: #142d53;
+        }
+
+        &:active,
+        &.active {
+            background-color: #115dcf;
+        }
     }
 
-    span {
-        display: inline-flex;
-        width: 100px;
-    }
-
-    &:active {
-        background-color: #5996f1;
-    }
-}   
+}

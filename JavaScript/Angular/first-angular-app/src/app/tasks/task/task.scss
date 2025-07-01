@@ -1,12 +1,21 @@
 #task {
+    background-color: #3274d64d;
+    border-radius: 1rem;
+    padding: 0.5rem;
 
     .task-item {
+
+        &.top {
+
+            h2 {
+                color: #0e2c5a;
+            }
+        }
 
         &.bottom {
             display: flex;
             align-items: center;
             justify-content: end;
-            background-color: #03265b93;
             padding: 1rem;
             border-radius: 1rem;
 

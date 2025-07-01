@@ -39,6 +39,9 @@
         overflow-y: auto;
         list-style: none;
         flex: 2;
+        gap: 0.5rem;
+        background-color: transparent;
+
         &::-webkit-scrollbar {
             display: none;
         }

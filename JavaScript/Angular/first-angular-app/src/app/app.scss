@@ -5,6 +5,7 @@ main {
     padding: 1rem;
 
     ul {
+        flex: 1;
 
         &#users {
             display: flex;
@@ -20,14 +21,13 @@ main {
         }
     }
 
-    > ul {
-        flex: 1;
-    }
-
-    app-tasks {
-        display: flex;
-        justify-content: center;
+    .content {
         flex: 2;
+        
+        #tasks {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     p {
