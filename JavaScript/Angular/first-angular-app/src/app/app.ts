@@ -15,13 +15,13 @@ import { DUMMY_USER } from './dummy-user';
 export class App {
   protected title = 'first-angular-app';
   users = DUMMY_USER;
-  selectedUserID?: number;
+  selectedUserID?: string;
 
   get selectedUser() {
     return this.users.find((user) => user.id === this.selectedUserID);
   }
 
-  onSelectUser(id: number) {
+  onSelectUser(id: string) {
     return this.selectedUserID = id;
   }
 }

@@ -16,7 +16,8 @@ main {
             margin: 0;
 
             li {
-
+                display: flex;
+                justify-content: center;
             }
         }
     }

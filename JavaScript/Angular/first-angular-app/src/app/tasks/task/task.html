@@ -1,10 +1,10 @@
-<div id="task" class="task-item">
-    <div class="task-item top">
+<app-card>
+        <div class="task-item top">
         <h2>{{ task.title }}</h2>
-        <label>{{ task.dueDate }}</label>
+        <label>{{ task.dueDate | date:'fullDate' }}</label>
         <p>{{ task.summary }}</p>
     </div>
     <div class="task-item bottom">
         <button (click)="onCompleteTask()">Complete</button>
     </div>
-</div>
+</app-card>
